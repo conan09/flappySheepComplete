@@ -35,6 +35,10 @@ cc.Class({
         cc.director.getCollisionManager().enabled = true;
         // this.StartRun();
         this.gameStart.getComponent("GameStart").ShowGameStart();
+
+        EventMgr.AddListener("GainScore", ()=>function(){
+            cc.log("current score ---> %d", this.score);
+        });
     },
 
     GainScore : function(){

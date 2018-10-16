@@ -118,6 +118,7 @@ cc.Class({
         if(other.node.group == "Obstacle"){
             D.GameManager.OverGame();
         }else if(other.node.group == "NextPipe"){
+            EventMgr.Dispatch("GainScore", other.node.group);
             D.GameManager.GainScore();
         }
 
