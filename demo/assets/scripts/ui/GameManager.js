@@ -25,15 +25,16 @@ cc.Class({
                 return this._state;
             },
             type : UserConst.GameState,
-        }
+        },
+        scrollView : cc.ScrollView,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
         D.GameManager = this;
-        cc.director.getCollisionManager().enabled = true;
-        // this.StartRun();
+        cc.director.getCollisionManager().enabled = true;        
+        this.StartRun();
         this.gameStart.getComponent("GameStart").ShowGameStart();
     },
 
